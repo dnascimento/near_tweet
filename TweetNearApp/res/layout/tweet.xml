@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/main_tweet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@android:color/background_light"
+        android:orientation="vertical"
+        android:paddingTop="2dp"
+        android:paddingBottom="5dp" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp" >
+
+            <TextView
+                android:id="@+id/tweet_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textIsSelectable="false"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tweet_author"
+                android:text="@string/says" />
+
+            <TextView
+                android:id="@+id/tweet_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tweet_author"
+                android:layout_toLeftOf="@+id/private_tweet"
+                android:autoLink="web"
+                android:textIsSelectable="false" />
+
+            <LinearLayout 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="right" >
+            
+            <ImageView
+                android:id="@+id/private_tweet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/ic_private"
+                android:visibility="gone" />
+            
+            <ImageButton
+                android:id="@+id/btn_report_spam"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="5dp"
+                android:src="@drawable/spam_selector"
+                android:background="@android:color/transparent"
+                android:contentDescription="@string/content_description" />
+            
+            </LinearLayout>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/tweet_poll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/tweet_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:contentDescription="@string/content_description"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="bottom"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical" >
+                
+                <LinearLayout
+                    android:id="@+id/btn_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:visibility="gone" >
+
+                    <ImageView
+                        android:id="@+id/btn_gpslocationimg"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:contentDescription="@string/content_description"
+                        android:src="@drawable/location_off" />
+
+                    <TextView
+                        android:id="@+id/btn_gpslocationname"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@android:color/black"
+                        android:textIsSelectable="false" />
+                    
+                </LinearLayout>
+                
+                <TextView
+                    android:id="@+id/tweet_timestamp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#999999"
+                    android:textIsSelectable="false" />
+                
+                <TextView
+                    android:id="@+id/number_of_replies"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:textColor="#33B5E5"
+                    android:textIsSelectable="false" />
+                
+            </LinearLayout>
+
+            <ImageButton
+                android:id="@+id/btn_private_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/reply_selector"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/btn_public_reply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/reply_all_selector"
+                android:background="@android:color/transparent" />
+
+            <ImageButton
+                android:id="@+id/btn_retweet"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:contentDescription="@string/content_description"
+                android:src="@drawable/share_selector"
+                android:background="@android:color/transparent" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/tweet_replies"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:visibility="gone" />
+
+</LinearLayout>
