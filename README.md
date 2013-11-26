@@ -25,6 +25,6 @@ This android app detects other users nearby and share your tweets with them.
 	4. Enjoy! :)
 
 ##Authors
-@author Iolanda Correia, Rodolfo Santos, Dário Nascimento
+Iolanda Correia, Rodolfo Santos, Dário Nascimento
 
 
